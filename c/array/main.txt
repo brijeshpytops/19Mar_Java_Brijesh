@@ -1,0 +1,104 @@
+syntax: data_type array_name[buffer/size] = {v1,v2...vn};
+
+#include <stdio.h>
+
+int main() {
+    // init of array
+    // float student_pr[100]; 
+    // declaration of array
+    float student_pr[] = {50.0, 60.0, 70.0, 80.0, 90.0, 100.0, 40.0, 10.0};
+    
+    // find the length of array
+    
+    // 1f = 4bytes
+    // 6f = 24bytes
+    
+    int len = sizeof(student_pr)/sizeof(student_pr[0]);
+    
+    // printf("%d", len);
+    
+    // access element using for
+    for(int start = 0; start<=len-1; start++){
+        printf("%.2f\n",student_pr[start]);
+    }
+    
+    // access element using indexing
+    // printf("%.2f\n",student_pr[0]);
+    // printf("%.2f\n",student_pr[1]);
+    // printf("%.2f\n",student_pr[2]);
+    // printf("%.2f\n",student_pr[3]);
+    // printf("%.2f\n",student_pr[4]);
+    // printf("%.2f\n",student_pr[5]);
+    
+    
+
+    return 0;
+}
+
+// two dim array
+
+// syntax: data_type array_name[row][col] = {
+    {90, 90, 90},
+    {80, 40, 80}
+}
+
+
+#include <stdio.h>
+
+int main() {
+    int stu_marks[2][3] = {
+        {90, 90, 90},
+        {80, 40, 80}
+    };
+    
+    int len_row = sizeof(stu_marks)/sizeof(stu_marks[0]);
+    int len_col = sizeof(stu_marks)/sizeof(stu_marks[0][0]);
+    
+    int num_of_rows = len_row;
+    int num_of_col = len_col/len_row;
+    
+    for(int row = 0; row<num_of_rows; row++){
+        for(int col = 0; col<num_of_col; col++){
+            // printf("%d-%d ",row, col);
+            printf("%d ", stu_marks[row][col]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+
+#include <stdio.h>
+
+int main() {
+    int stu_marks[2][4] = {
+        {90, 90, 90, 90},
+        {80, 40, 80, 40}
+    };
+    
+    int score[2];
+    
+    int len_row = sizeof(stu_marks)/sizeof(stu_marks[0]);
+    int len_col = sizeof(stu_marks)/sizeof(stu_marks[0][0]);
+    
+    int num_of_rows = len_row;
+    int num_of_col = len_col/len_row;
+    
+    for(int row = 0; row<num_of_rows; row++){
+        int total_marks = 0;
+        for(int col = 0; col<num_of_col; col++){
+            // printf("%d-%d ",row, col);
+            // printf("%d ", stu_marks[row][col]);
+            total_marks += stu_marks[row][col];
+        }
+        score[row] = total_marks/num_of_col;
+        printf("\n");
+    }
+    
+    for(int start = 0; start<num_of_rows; start++){
+        printf("Stu-%d | Score-%d%\n", start+1, score[start]);
+    }
+
+    return 0;
+}
