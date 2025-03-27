@@ -1,0 +1,71 @@
+what is string in c?
+
+collection of char
+
+"gsafh ajsdrt sjysgdnm suy nsafh12324@!2342423#"
+
+char greetings[] = {'H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd', '!', '\0'};
+
+#include <stdio.h>
+
+int main() {
+    char first_name[] = "brijesh";
+    
+    printf("%c", first_name[0]);
+    printf("%c", first_name[1]);
+    printf("%c", first_name[2]);
+    printf("%c", first_name[3]);
+    printf("%c", first_name[4]);
+    printf("%c", first_name[5]);
+    printf("%c", first_name[6]);
+    // printf("%c", first_name[7]);
+    // printf("%c", first_name[7]);
+
+    return 0;
+}
+
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char first_name[] = "brijesh";
+    
+    // int len = sizeof(first_name)/sizeof(first_name[0]);
+    
+    // printf("%d", len);
+    
+    printf("%d", strlen(first_name));
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char first_name[] = "brijesh";
+    char copied_str[100];
+    
+    strcpy(copied_str, first_name);
+    
+    printf("%s", copied_str);
+    // printf("%d", strlen(first_name));
+
+    return 0;
+}
+
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char first_name[100] = "brijesh";
+    char last_name[] = "gondaliya";
+    
+    strcat(first_name, last_name);
+    
+    printf("%s", first_name);
+
+    return 0;
+}

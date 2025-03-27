@@ -102,3 +102,15 @@ int main() {
 
     return 0;
 }
+
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char name[100] = "my name is '\"brijesh go\\ndaliya\"'";
+    
+    printf("%s", name);
+
+    return 0;
+}

@@ -213,3 +213,23 @@ int main() {
 
     return 0;
 }
+
+
+A
+B C
+D E F 
+G H I J 
+K L M N O
+
+-
+B -
+- E -
+G - I -
+- L M - O
+
+
+A 
+  B
+    C
+      D
+        E
