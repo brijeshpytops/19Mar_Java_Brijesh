@@ -221,11 +221,34 @@ D E F
 G H I J 
 K L M N O
 
--
-B -
-- E -
-G - I -
-- L M - O
+- 
+B - 
+D - F 
+- H - J 
+- L - N - 
+
+#include <stdio.h>
+
+int main() {
+    
+    int num = 5, g_var = 1, flag = 0;
+    
+    for(int row = 1; row<=num; row++){
+        for(int col = 1; col<=row; col++){
+            if (flag == 0){
+                printf("- ");
+                flag=1;
+            }else{
+                printf("%c ", g_var+64);
+                flag=0;
+            }
+            g_var++;
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
 
 
 A 
@@ -233,3 +256,37 @@ A
     C
       D
         E
+
+
+#include <stdio.h>
+
+int main() {
+    
+    int num = 5, g_var = 1, flag = 0;
+    
+    for(int row = 1; row<=num; row++){
+        for(int col = 1; col<=row; col++){
+            if (row == col ){
+                
+                printf("%c ", col+64);
+            }else{
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+*     * * * *
+*     *
+*     *
+* * * * * * *
+      *     *
+      *     *
+* * * *     *
+
+
+
+              

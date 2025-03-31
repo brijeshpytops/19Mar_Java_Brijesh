@@ -1,0 +1,18 @@
+winning_number = 65 [0-100]
+guess_num = 65 - win
+guess_num = 55 - too low
+guess_num = 75 - too high
+guess_count?
+
+wn = 56
+gn = ?
+
+if wn == gn 
+    you are win
+    print guess count here
+
+else 
+    if gn < wn:
+        too low
+    else
+        too high
