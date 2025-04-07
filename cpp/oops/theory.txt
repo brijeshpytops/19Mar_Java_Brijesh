@@ -1,0 +1,19 @@
+1] class and object
+2] encapsulation
+    - access specifiers
+    - constructor
+    - getter and setter method
+3] inheritance
+    - types of inheritance
+4] polymorphism
+    - compile time
+        - static binding 
+            method overloading
+            operator overloading
+    - run time
+        - dynamic binding
+            method overriding
+
+
+Friend function
+Virtual function
