@@ -1,6 +1,6 @@
 1] class and object
 2] encapsulation
-    - access specifiers
+    - access specifiers - private | public | protected
     - constructor
     - getter and setter method
 3] inheritance
