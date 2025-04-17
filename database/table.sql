@@ -36,3 +36,71 @@ mysql> describe users;
 | email     | varchar(255) | NO   |     | NULL    |                |
 | password  | varchar(255) | YES  |     | NULL    |                |
 +-----------+--------------+------+-----+---------+----------------+
+
+mysql> alter table users add is_active bool;
+Query OK, 0 rows affected (0.18 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> describe users;
++-----------+--------------+------+-----+---------+----------------+
+| Field     | Type         | Null | Key | Default | Extra          |
++-----------+--------------+------+-----+---------+----------------+
+| id        | int          | NO   | PRI | NULL    | auto_increment |
+| full_name | varchar(255) | NO   |     | NULL    |                |
+| email     | varchar(255) | NO   |     | NULL    |                |
+| password  | varchar(255) | YES  |     | NULL    |                |
+| is_active | tinyint(1)   | YES  |     | NULL    |                |
++-----------+--------------+------+-----+---------+----------------+
+
+mysql> alter table users add mobile varchar(255) not null;
+Query OK, 0 rows affected (0.13 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> describe users;
++-----------+--------------+------+-----+---------+----------------+
+| Field     | Type         | Null | Key | Default | Extra          |
++-----------+--------------+------+-----+---------+----------------+
+| id        | int          | NO   | PRI | NULL    | auto_increment |
+| full_name | varchar(255) | NO   |     | NULL    |                |
+| email     | varchar(255) | NO   |     | NULL    |                |
+| password  | varchar(255) | YES  |     | NULL    |                |
+| is_active | tinyint(1)   | YES  |     | NULL    |                |
+| mobile    | varchar(255) | NO   |     | NULL    |                |
++-----------+--------------+------+-----+---------+----------------+
+
+mysql> alter table users modify password varchar(200) not null;
+Query OK, 0 rows affected (0.15 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> describe users;
++-----------+--------------+------+-----+---------+----------------+
+| Field     | Type         | Null | Key | Default | Extra          |
++-----------+--------------+------+-----+---------+----------------+
+| id        | int          | NO   | PRI | NULL    | auto_increment |
+| full_name | varchar(255) | NO   |     | NULL    |                |
+| email     | varchar(255) | NO   |     | NULL    |                |
+| password  | varchar(200) | NO   |     | NULL    |                |
+| is_active | tinyint(1)   | YES  |     | NULL    |                |
+| mobile    | varchar(255) | NO   |     | NULL    |                |
++-----------+--------------+------+-----+---------+----------------+
+
+mysql> alter table users drop mobile;
+Query OK, 0 rows affected (0.13 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> describe users;
++-----------+--------------+------+-----+---------+----------------+
+| Field     | Type         | Null | Key | Default | Extra          |
++-----------+--------------+------+-----+---------+----------------+
+| id        | int          | NO   | PRI | NULL    | auto_increment |
+| full_name | varchar(255) | NO   |     | NULL    |                |
+| email     | varchar(255) | NO   |     | NULL    |                |
+| password  | varchar(200) | NO   |     | NULL    |                |
+| is_active | tinyint(1)   | YES  |     | NULL    |                |
++-----------+--------------+------+-----+---------+----------------+
+
+mysql> drop table users;
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> show tables;
+Empty set (0.00 sec)
