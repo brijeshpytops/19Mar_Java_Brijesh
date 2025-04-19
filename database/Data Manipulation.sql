@@ -154,4 +154,59 @@ mysql> select * from users order by id desc limit 5;
 |  6 | michael_lee | michael.lee@example.com | 7654321098 | mike@789  |
 |  5 | jane_smith  | jane.smith@example.com  | 8765432109 | jane@456  |
 |  4 | john_doe    | john.doe@example.com    | 9876543210 | pass@123  |
-+----+-------------+-------------------------+------------+-----------+
++----+-------------+-------------------------+------------+-----------+.
+
+-- update table data based on condition
+
+mysql> update users set password = "david@111" where id = 8;
+Query OK, 1 row affected (0.02 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from users;
++----+-------------+-------------------------+-----------------+------------+
+| id | username    | email                   | mobile          | password   |
++----+-------------+-------------------------+-----------------+------------+
+|  1 | brijesh01   | brijesh@gmail.com       | +91 1236547890  | test@1234  |
+|  2 | ravi01      | ravi@gmail.com          | +91 11111147890 | ravi@1234  |
+|  3 | bansi02     | bansi@gmail.com         | +91 222222222   | bansi@0987 |
+|  4 | john_doe    | john.doe@example.com    | 9876543210      | pass@123   |
+|  5 | jane_smith  | jane.smith@example.com  | 8765432109      | jane@456   |
+|  6 | michael_lee | michael.lee@example.com | 7654321098      | mike@789   |
+|  7 | sara_khan   | sara.khan@example.com   | 6543210987      | sara@321   |
+|  8 | david_rao   | david.rao@example.com   | 5432109876      | david@111  |
++----+-------------+-------------------------+-----------------+------------+
+
+mysql> update users set password = "111222333" where id > 5;
+Query OK, 3 rows affected (0.01 sec)
+Rows matched: 3  Changed: 3  Warnings: 0
+
+mysql> select * from users;
++----+-------------+-------------------------+-----------------+------------+
+| id | username    | email                   | mobile          | password   |
++----+-------------+-------------------------+-----------------+------------+
+|  1 | brijesh01   | brijesh@gmail.com       | +91 1236547890  | test@1234  |
+|  2 | ravi01      | ravi@gmail.com          | +91 11111147890 | ravi@1234  |
+|  3 | bansi02     | bansi@gmail.com         | +91 222222222   | bansi@0987 |
+|  4 | john_doe    | john.doe@example.com    | 9876543210      | pass@123   |
+|  5 | jane_smith  | jane.smith@example.com  | 8765432109      | jane@456   |
+|  6 | michael_lee | michael.lee@example.com | 7654321098      | 111222333  |
+|  7 | sara_khan   | sara.khan@example.com   | 6543210987      | 111222333  |
+|  8 | david_rao   | david.rao@example.com   | 5432109876      | 111222333  |
++----+-------------+-------------------------+-----------------+------------+
+
+--  delete data from table based on condition
+mysql> delete from users where id = 8;
+Query OK, 1 row affected (0.01 sec)
+mysql> select * from users;
++----+-------------+-------------------------+-----------------+------------+
+| id | username    | email                   | mobile          | password   |
++----+-------------+-------------------------+-----------------+------------+
+|  1 | brijesh01   | brijesh@gmail.com       | +91 1236547890  | test@1234  |
+|  2 | ravi01      | ravi@gmail.com          | +91 11111147890 | ravi@1234  |
+|  3 | bansi02     | bansi@gmail.com         | +91 222222222   | bansi@0987 |
+|  4 | john_doe    | john.doe@example.com    | 9876543210      | pass@123   |
+|  5 | jane_smith  | jane.smith@example.com  | 8765432109      | jane@456   |
+|  6 | michael_lee | michael.lee@example.com | 7654321098      | 111222333  |
+|  7 | sara_khan   | sara.khan@example.com   | 6543210987      | 111222333  |
++----+-------------+-------------------------+-----------------+------------+
+
