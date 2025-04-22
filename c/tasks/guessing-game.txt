@@ -16,3 +16,30 @@ else
         too low
     else
         too high
+
+Task 1:
+Write a C program that checks whether a number is positive, negative, or zero using conditional statements.
+Task 2:
+Write a C program that checks whether a number is even or odd.
+Task 3:
+Write a C program that prints the Fibonacci series up to a given number of terms (e.g., 6 terms: 0 1 1 2 3 5).
+Task 4:
+Write a C program to print the following pattern:
+A  
+a b  
+A B C  
+a b c d  
+A B C D E  
+---------  
+0 1 0 1 0  
+1 0 1 0 1  
+0 1 0 1 0  
+1 0 1 0 1  
+0 1 0 1 0
+
+Task 5:
+What will be the output of the following C code? Explain your answer.
+int a = 10, b = 5;
+printf("%d", a++ * --b);
+Task 6:
+Write a C program that checks a user’s score and prints the class (Excellent, Very Good, Good, Pass, or Fail).
