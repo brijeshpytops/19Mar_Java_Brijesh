@@ -268,7 +268,7 @@ int main() {
         for(int col = 1; col<=row; col++){
             if (row == col ){
                 
-                printf("%c ", col+64);
+                printf("c% ", col+64);
             }else{
                 printf(" ");
             }

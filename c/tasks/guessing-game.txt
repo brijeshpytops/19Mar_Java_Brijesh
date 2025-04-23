@@ -43,3 +43,18 @@ int a = 10, b = 5;
 printf("%d", a++ * --b);
 Task 6:
 Write a C program that checks a user’s score and prints the class (Excellent, Very Good, Good, Pass, or Fail).
+
+
+Task 7:
+Create an empty array and insert values into the array given by the user. Then print the array values.
+
+Task 8:
+Create an integer numeric array and find the second largest value from the array.
+input: [1, 3, 5, 100, 2, 4]
+output: 5
+
+Task 9:
+Create an integer numeric array and sort that array. Print the sorted values from this sorted array.
+
+input: [1, 3, 5, 100, 2, 4]
+output: [1, 2, 3, 4, 5, 100]
