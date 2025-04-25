@@ -21,8 +21,43 @@ Task 1:
 Write a C program that checks whether a number is positive, negative, or zero using conditional statements.
 Task 2:
 Write a C program that checks whether a number is even or odd.
+--------------------------------------------------------------
 Task 3:
 Write a C program that prints the Fibonacci series up to a given number of terms (e.g., 6 terms: 0 1 1 2 3 5).
+
+Ans: 
+
+#include <stdio.h>
+
+int main() {
+    // 0 , 1, 1, 2..
+    
+    int num;
+    printf("Enter a num: ");
+    scanf("%d", &num);
+    
+    int n1=0, n2=1;
+    
+    
+    // printf("%d", num);
+    
+    for(int start = 0; start<num; start++){
+       if (start == 0){
+            printf("%d ", n1);
+       }else if(start == 1){
+           printf("%d ", n2);
+       }else{
+           int nth = n1 + n2;
+           n1 = n2;
+           n2 = nth;
+          printf("%d ", nth);
+       }
+       
+    }
+
+    return 0;
+}
+--------------------------------------------------------------
 Task 4:
 Write a C program to print the following pattern:
 A  
