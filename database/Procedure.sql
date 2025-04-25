@@ -20,7 +20,7 @@ DELIMITER //
 
 create procedure insert_employee_and_emp_counts(IN emp_name VARCHAR(255), IN emp_salary DECIMAL(10, 2))
 begin
-	INSERT INTO employees (employee_name, salary) VALUES (emp_name, emp_salary);
+	  INSERT INTO employees (employee_name, salary) VALUES (emp_name, emp_salary);
     select count(employee_id) as employee_count  from employees;
 end;
 
