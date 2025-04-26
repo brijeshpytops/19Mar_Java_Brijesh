@@ -93,3 +93,20 @@ Create an integer numeric array and sort that array. Print the sorted values fro
 
 input: [1, 3, 5, 100, 2, 4]
 output: [1, 2, 3, 4, 5, 100]
+
+Task 10:
+Create a function that takes one parameter (an option number) and converts the following string into a specific case based on the selected option.
+
+string = "BhaRaT FUtuRIst Ai" - get from the user
+
+Options:
+
+1 → Convert to lowercase → "bharat futurist ai"
+
+2 → Convert to uppercase → "BHARAT FUTURIST AI"
+
+3 → Convert to swapcase → "bHArAt futUriST aI"
+
+4 → Convert to title case → "Bharat Futurist Ai"
+
+5 → Convert to capitalize first word only → "Bharat futurist ai"

@@ -104,3 +104,7 @@ Query OK, 0 rows affected (0.04 sec)
 
 mysql> show tables;
 Empty set (0.00 sec)
+
+
+-- only delete table data not a table structure
+mysql> truncate table employees;
